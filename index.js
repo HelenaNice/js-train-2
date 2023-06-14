@@ -5,7 +5,7 @@ function calculateExpression(expression) {
 if (typeof expression !== 'string') {
     return "Argument is not a string";
   } else {
-         const result = eval(expression);
+         let result = eval(expression);
       return result;
       }
    }
@@ -25,7 +25,7 @@ console.log(
 
 // Створюємо функцію з назвою getNumberFromString, яка приймає один аргумент s
 function getNumberFromString(s) {
-   const number = parseFloat(s);
+   let number = parseFloat(s);
   if (isNaN(number)) {
     return "Couldn't extract a number from the provided string.";
   } else {
@@ -52,7 +52,7 @@ console.log(
 
 // Створюємо функцію з назвою getIntegerFromString, яка приймає один аргумент s
 function getIntegerFromString(s) {
-  const number = parseInt(s);
+  let number = parseInt(s);
   if (isNaN(number)) {
     return "Couldn't extract an integer from the provided string.";
   } else {
@@ -121,7 +121,7 @@ console.log("isValueNaN(100)", isValueNaN(100)); // Виведе "The value is n
 
 // Створюємо функцію з назвою createURLObject, яка приймає один аргумент - urlStr
 function createURLObject(urlStr) {
-  const url = new URL(urlStr);
+  let url = new URL(urlStr);
   return url;
 
   // Використовуємо вбудований конструктор URL, щоб створити новий об'єкт URL з введеного рядка.
@@ -139,7 +139,7 @@ console.log(
 
 // Створюємо функцію з назвою encodeURLComponent, яка приймає один аргумент - urlComponent
 function encodeURLComponent(urlComponent) {
-  const encodedComponent = encodeURIComponent(urlComponent);
+  let encodedComponent = encodeURIComponent(urlComponent);
   return encodedComponent;
   // Використовуємо вбудовану функцію encodeURIComponent, щоб закодувати введений компонент URL.
   // Ця функція повертає закодований компонент URL, замінивши небезпечні символи на їх процентне кодування.
@@ -157,7 +157,7 @@ console.log(
 
 // Створюємо функцію з назвою encodeURL, яка приймає один аргумент - url
 function encodeURL(url) {
-  const encodedURL = encodeURI(url);
+  let encodedURL = encodeURI(url);
   return encodedURL;
   // Використовуємо вбудовану функцію encodeURI, щоб закодувати введений URL.
   // Ця функція повертає закодований URL, замінивши небезпечні символи на їх процентне кодування.
@@ -175,7 +175,7 @@ console.log(
 
 // Створюємо функцію з назвою decodeURLComponent, яка приймає один аргумент - urlComponent
 function decodeURLComponent(urlComponent) {
-  const decodedURLComponent = decodeURIComponent(urlComponent);
+  let decodedURLComponent = decodeURIComponent(urlComponent);
   return decodedURLComponent;
   // Використовуємо вбудовану функцію decodeURIComponent, щоб декодувати введений закодований компонент URL.
   // Ця функція повертає декодований компонент URL, замінивши процентне кодування символів на їх реальні значення.
@@ -193,7 +193,7 @@ console.log(
 
 // Створюємо функцію з назвою decodeURL, яка приймає один аргумент - url
 function decodeURL(url) {
-  const decodedURL = decodeURI(url);
+  let decodedURL = decodeURI(url);
   return decodedURL;
   // Використовуємо вбудовану функцію decodeURI, щоб декодувати введений закодований URL.
   // Ця функція повертає декодований URL, замінивши процентне кодування символів на їх реальні значення.
